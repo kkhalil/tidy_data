@@ -2,39 +2,39 @@
 --------------------------------------------------------
 
 <p>The original data was collected from the accelerometers from the Samsung Galaxy
-S smartphone. A full description is available at the site where the data was
-obtained: </p>
-<a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">Human activity recognition using Smartphone</a>
+S Smartphone. A full description is available at the site where the data was
+obtained: 
+<a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">Human activity recognition using Smartphone</a> </p>
  
-<p>Here are the data provided by the instructor to work on for the project: </p>
-<a href="https://class.coursera.org/getdata-002/human_grading/view/courses/972080/assessments/3/submissions"> The data project files</a>
+<p>Here are the data provided by the instructor to work on for the project: 
+<a href="https://class.coursera.org/getdata-002/human_grading/view/courses/972080/assessments/3/submissions"> The data project files</a></p>
 
 <p>The dataset includes several files but we will work only on the following files:</p>
 
 <ol>
-<li>1. `./features.txt`           : List of all features (variable names).</li>
-<li>2. `./activity_labels.txt`    : Links the class labels with their activity name.</li>
-<li>3. `./train/X_train.txt`      : Training set.</li>
-<li>4. `./train/y_train.txt`      : Training labels (activity IDs).</li>
-<li>5. `./train/subject_train.txt`: Training subject labels (IDs).</li>
-<li>6. `./test/X_test.txt`        : Test set.</li>
-<li>7. `./test/y_test.txt`        : Test labels (activity IDs).</li>
-<li>8. `./test/subject_test.txt`  : Test subject labels (IDs).</li>
+<li>`./features.txt`           : List of all features (variable names).</li>
+<li>`./activity_labels.txt`    : Links the class labels with their activity name.</li>
+<li>`./train/X_train.txt`      : Training set.</li>
+<li>`./train/y_train.txt`      : Training labels (activity IDs).</li>
+<li>`./train/subject_train.txt`: Training subject labels (IDs).</li>
+<li>`./test/X_test.txt`        : Test set.</li>
+<li>`./test/y_test.txt`        : Test labels (activity IDs).</li>
+<li>`./test/subject_test.txt`  : Test subject labels (IDs).</li>
 </ol>
-<p>You must downloded those files into the working directory withn the same hirearchal structure.</p>
+<p>You must download those files into the working directory within the same hierarchal structure.</p>
 
 <h2> The major steps to generate the tidy data are:</h2>
 
-<p><strong> step 1.</strong> Invoke the function `checkfiles` to verify the existance of 8 working files </p>
+<p><strong> step 1.</strong> Invoke the function `checkfiles` to verify the existence of 8 working files </p>
 
-<p><strong> step 2.</strong> Invoke the function `get_mean_std` to extract the mean and standard deviation measurments from the merged dataset of both training ang test data, we obtain (`10299 observations x 561 features`). </p>
-<p>During that, The functions `read_data` and `read_names`. will be invoked to read the training and test data the merge them and to read the featues names and labels the extracted data set of means `mean()` and standard deviation `std()`. We have used a regular expression patern to select features where their names includes `mean()` or `std()`. We ignore features with names containing meanFreq regarding to their description in the `featrues_info.txt` file. </p>
-<p>We obtain a dataset of `10299 observations x 66 featues` (`mean()` | `std()`)</p>
+<p><strong> step 2.</strong> Invoke the function `get_mean_std` to extract the mean and standard deviation measurements from the merged dataset of both training and test data, we obtain (`10299 observations x 561 features`). </p>
+<p>During that, the functions `read_data` and `read_names`. will be invoked to read the training and test data the merge them and to read the features names and labels the extracted data set of means `mean()` and standard deviation `std()`. We have used a regular expression pattern to select features where their names includes `mean()` or `std()`. We ignore features with names containing meanFreq regarding to their description in the `featrues_info.txt` file. </p>
+<p>We obtain a dataset of `10299 observations x 66 features` (`mean()` | `std()`)</p>
 
-<p><strong> step 3.</strong> Invoke the function 'get_tidy' that works on the extracted mean and standrad deviation features (result of `step 2`) to calculate the average of each variable for each activity and each subject. 
-We have used the function 'split' to split the mean and std dataset according to the activity labels the the subject labels, We then used the functions 'sapply' and 'colMeans' to calculate the mean of each activity and subject group combinations which gives a matrix of (180 (activity, subject) x 66 (mean | std featues)). 
-The result of sapply is a `matrix` with features in rows and activity subject in columns, as we need to include activity and subject labels within the matrix which will coerce the measurement values to the `character` data type. Therefore we decided to `tronspose` the matrix (swaping rows and columns) the add activity and subject labels in front of tidy data columns and converting itto a data frame.
-During that, We have used the function `read_names` to get the activity names and use them instead of activity labels to have more descriptive data.</p>
+<p><strong> step 3.</strong> Invoke the function 'get_tidy' that works on the extracted mean and standard deviation features (result of `step 2`) to calculate the average of each variable for each activity and each subject. 
+We have used the function 'split' to split the mean and std dataset according to the activity labels the the subject labels, We then used the functions 'sapply' and 'colMeans' to calculate the mean of each activity and subject group combinations which gives a matrix of (180 (activity, subject) x 66 (mean | std features)). 
+The result of `sapply` is a `matrix` with features in rows and activity subject in columns, as we need to include activity and subject labels within the matrix which will coerce the measurement values to the `character` data type. Therefore we decided to `transpose` the matrix (swapping rows and columns) the add activity and subject labels in front of tidy data columns and converting into a data frame.
+During that, we have used the function `read_names` to get the activity names and use them instead of activity labels to have more descriptive data.</p>
 
 <p><strong> step 4.</strong> Save the calculated tidy data into the working directory in the text file 'tidy_data.txt'</p>
 
@@ -42,7 +42,6 @@ During that, We have used the function `read_names` to get the activity names an
 <p>   column  1    : contains the activity names,</p>
 <p>   column  2    : contains the subject labels,</p>
 <p>   columns 3:68 : contain the averages for the 66 mean and standard deviation features. </p>
-
 
 ## Feature Description
 ----------------------
@@ -69,7 +68,7 @@ signals). </p>
 <p>These signals were used to estimate variables of the feature vector for each
 pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.</p>
 
-<p>Naming abreviations:</p>
+<p>Naming convention:</p>
 <ul>
 <li>- prefix `t`  : Time)</li>
 <li>- prefix `f`  : Frequency domain signals)</li>
