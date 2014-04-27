@@ -6,10 +6,8 @@ S smartphone. A full description is available at the site where the data was
 obtained: </p>
 <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">Human activity recognition using Smartphone</a>
  
-
-
 <p>Here are the data provided by the instructor to work on for the project: </p>
-<a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip >get data project files</a>
+<a href="https://class.coursera.org/getdata-002/human_grading/view/courses/972080/assessments/3/submissions"> The data project files</a>
 
 <p>The dataset includes several files but we will work only on the following files:</p>
 
