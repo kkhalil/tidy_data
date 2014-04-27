@@ -2,21 +2,21 @@
 
 <p>Clone this repository tidy_data in the working directory by doing:</p>
 
-<p>`git clone https://github.com/kkhalil/tidy_data.git`</p>
+<strong> <p>`git clone https://github.com/kkhalil/tidy_data.git`</p> </strong>
 
 <p>Normally, we will have the R script file `run_analysis.R` and others working files.</p>
 
 <p>Change your working directory to the `tidy_data` directory which must contain run_analysis.R and the following 8 text files:</p>
 
 <ol>
-<li>`./features.txt` : List of all features (variable names).</li>
-<li>`./activity_labels.txt` : Links the class labels with their activity name.</li>
-<li>`./train/X_train.txt` : Training set.</li>
-<li>`./train/y_train.txt` : Training labels (activity IDs).</li>
-<li>`./train/subject_train.txt`: Training subject labels (IDs).</li>
-<li>`./test/X_test.txt` : Test set.</li>
-<li>`./test/y_test.txt` : Test labels (activity IDs).</li>
-<li>`./test/subject_test.txt` : Test subject labels (IDs).</li>
+<li><strong>`./features.txt`</strong> : List of all features (variable names).</li>
+<li><strong>`./activity_labels.txt`</strong> : Links the class labels with their activity name.</li>
+<li><strong>`./train/X_train.txt`</strong> : Training set.</li>
+<li><strong>`./train/y_train.txt`</strong> : Training labels (activity IDs).</li>
+<li><strong>`./train/subject_train.txt`</strong>: Training subject labels (IDs).</li>
+<li><strong>`./test/X_test.txt`</strong> : Test set.</li>
+<li><strong>`./test/y_test.txt`</strong> : Test labels (activity IDs).</li>
+<li><strong>`./test/subject_test.txt`</strong> : Test subject labels (IDs).</li>
 </ol>
 
 <p>Verify the existence of those file within the specified structure.</p>
@@ -54,5 +54,5 @@ During that, we have used the function `read_names` to get the activity names an
 <p> <strong>column 2 </strong> : contains the subject labels,</p>
 <p> <strong>columns 3:68</strong> : contain the averages for the 66 mean and standard deviation features. </p>
 
-<p>Please look at the `CodeBook.md` file for more information on features and dataset.</p>
-<strong><p>Please look at the script `run_analysis.R` for more explanation about the script.</p></strong>
+<strong><p>Please look at the `CodeBook.md` file for more information on features and dataset.</p>
+<p>Please look at the script `run_analysis.R` for more explanation about the script.</p></strong>

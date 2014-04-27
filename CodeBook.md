@@ -11,15 +11,16 @@ obtained:
 <p>The dataset includes several files but we will work only on the following files:</p>
 
 <ol>
-<li>`./features.txt`           : List of all features (variable names).</li>
-<li>`./activity_labels.txt`    : Links the class labels with their activity name.</li>
-<li>`./train/X_train.txt`      : Training set.</li>
-<li>`./train/y_train.txt`      : Training labels (activity IDs).</li>
-<li>`./train/subject_train.txt`: Training subject labels (IDs).</li>
-<li>`./test/X_test.txt`        : Test set.</li>
-<li>`./test/y_test.txt`        : Test labels (activity IDs).</li>
-<li>`./test/subject_test.txt`  : Test subject labels (IDs).</li>
+<li><strong>`./features.txt`</strong> : List of all features (variable names).</li>
+<li><strong>`./activity_labels.txt`</strong> : Links the class labels with their activity name.</li>
+<li><strong>`./train/X_train.txt`</strong> : Training set.</li>
+<li><strong>`./train/y_train.txt`</strong> : Training labels (activity IDs).</li>
+<li><strong>`./train/subject_train.txt`</strong>: Training subject labels (IDs).</li>
+<li><strong>`./test/X_test.txt`</strong> : Test set.</li>
+<li><strong>`./test/y_test.txt`</strong> : Test labels (activity IDs).</li>
+<li><strong>`./test/subject_test.txt`</strong> : Test subject labels (IDs).</li>
 </ol>
+
 <p>You must download those files into the working directory within the same hierarchal structure.</p>
 
 ## The major steps to generate the tidy data are:
