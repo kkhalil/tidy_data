@@ -1,5 +1,4 @@
 ## The Tidy Data is generated from the UCI HAR DATASET
---------------------------------------------------------
 
 <p>The original data was collected from the accelerometers from the Samsung Galaxy
 S Smartphone. A full description is available at the site where the data was
@@ -23,7 +22,7 @@ obtained:
 </ol>
 <p>You must download those files into the working directory within the same hierarchal structure.</p>
 
-<h2> The major steps to generate the tidy data are:</h2>
+## The major steps to generate the tidy data are:
 
 <p><strong> step 1.</strong> Invoke the function `checkfiles` to verify the existence of 8 working files </p>
 
@@ -44,7 +43,7 @@ During that, we have used the function `read_names` to get the activity names an
 <p>   columns 3:68 : contain the averages for the 66 mean and standard deviation features. </p>
 
 ## Feature Description
-----------------------
+
 <p>The features selected for this database come from the `accelerometer` and
 `gyroscope` 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals
 (prefix `t` to denote `time`) were captured at a constant rate of 50 Hz. Then
@@ -68,7 +67,7 @@ signals). </p>
 <p>These signals were used to estimate variables of the feature vector for each
 pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.</p>
 
-<p>Naming convention:</p>
+<p><strong>Naming convention:</strong></p>
 <ul>
 <li>- prefix `t`  : Time)</li>
 <li>- prefix `f`  : Frequency domain signals)</li>
@@ -99,7 +98,7 @@ pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 <p>fBodyGyroMag </p>
 <p>fBodyGyroJerkMag </p>
 
-<p>The set of variables that were estimated from these signals are: </p>
+<p><strong>The set of variables that were estimated from these signals are: </strong></p>
 <p>`mean()`: Mean value</p>
 <p>`std()`: Standard deviation</p>
 
@@ -110,8 +109,8 @@ pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 ## Activities:
    Activity labels are from `1` to `6`
    
-   Activicty code | Activity name
-   -----------------------------------------
+<strong> Activicty code | Activity name</strong>
+
          1        |  WALKING
          2        |  WALKING_UPSTAIRS
          3        |  WALKING_DOWNSTAIRS
@@ -127,8 +126,8 @@ pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 ## Features Variables:
 
-   Feature Code  | Feature Name
-   -----------------------------------------
+</strong>Feature Code  | Feature Name</strong>
+
          1       |  tBodyAcc-mean()-X
          2       |  tBodyAcc-mean()-Y
          3       |  tBodyAcc-mean()-Z

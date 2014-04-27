@@ -1,5 +1,4 @@
 ## Preparing the dataset and script:
------------------------------------
 
 <p>Clone this repository tidy_data in the working directory by doing:</p>
 
@@ -26,20 +25,16 @@
 <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">Human activity recognition using Smartphone</a>
 and then extract it into a directory that you use as a working directory. After that, copy the file `run_analysis.R` into this directory.</p>
  
-
-
-Note: Be sure that your working directory contains the run_analysis.R file and the other 8 data files.
+<strong>Note:</strong> Be sure that your working directory contains the run_analysis.R file and the other 8 data files.
 
 ## Run the script:
-------------------
+
 <p>Run Rscript `<working-directory>/run_analysis.R` or open the file `run_analysis.R` with `RStudio` and chande the working directory, then source the file and invoke the function `create_tidy_data()` which will return the 
 `tidy_data` or `NULL` if any of the 8 data file does not exist.
 
-
-
 <p>The tidy dataset should be created in the working directory as a text file named `tidy_data.txt`</p>
 
-<h2>The major steps to generate the tidy data are:</h2>
+## The major steps to generate the tidy data are:
 
 <p><strong> step 1.</strong> Invoke the function `checkfiles` to verify the existence of 8 working files </p>
 
@@ -55,9 +50,9 @@ During that, we have used the function `read_names` to get the activity names an
 <p><strong> step 4.</strong> Save the calculated tidy data into the working directory in the text file 'tidy_data.txt'</p>
 
 <p> <strong>The result is the tidy data which is a data frame as follow:</strong></p>
-<p>   column  1    : contains the activity names,</p>
-<p>   column  2    : contains the subject labels,</p>
-<p>   columns 3:68 : contain the averages for the 66 mean and standard deviation features. </p>
+<p> <strong>column 1 </strong> : contains the activity names,</p>
+<p> <strong>column 2 </strong> : contains the subject labels,</p>
+<p> <strong>columns 3:68</strong> : contain the averages for the 66 mean and standard deviation features. </p>
 
 <p>Please look at the `CodeBook.md` file for more information on features and dataset.</p>
-<p>Please look at the script `run_analysis.R` for more explanation about the script.</p>
+<strong><p>Please look at the script `run_analysis.R` for more explanation about the script.</p></strong>
